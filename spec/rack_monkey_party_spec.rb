@@ -25,7 +25,7 @@ describe MonkeyParty, :vcr do
 
     it "raises an exception if the list is nil" do
       retain_old_list do
-        MonkeyParty.list_name = nil
+        MonkeyParty.stubs(:list_name).returns(nil)
         lambda { MonkeyParty.list }.should raise_error(MonkeyParty::ListNotSet)
       end
     end
