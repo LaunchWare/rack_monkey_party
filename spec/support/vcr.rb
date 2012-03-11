@@ -23,8 +23,9 @@ VCR.configure do |c|
 
   c.default_cassette_options = {
     :match_requests_on => [:method, :mailchimp_matcher],
-    :record => :new_episodes 
+    :record => :new_episodes
   }
+
   c.filter_sensitive_data('<API KEY>') { MonkeyParty.api_key }
 end
 

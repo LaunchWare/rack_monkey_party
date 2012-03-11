@@ -19,6 +19,7 @@ Or install it yourself as:
     $ gem install rack_monkey_party
 
 Configure mailchimp parameters
+
 ```ruby
   MonkeyParty.api_key = 'an_api_key'
   MonkeyParty.data_center = 'us1'
