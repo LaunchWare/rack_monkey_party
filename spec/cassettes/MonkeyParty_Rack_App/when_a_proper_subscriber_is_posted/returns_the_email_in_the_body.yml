@@ -17,7 +17,7 @@ http_interactions:
       server:
       - nginx/0.7.65
       date:
-      - Sun, 11 Mar 2012 19:49:06 GMT
+      - Sun, 11 Mar 2012 20:27:21 GMT
       content-type:
       - application/xml
       connection:
@@ -42,5 +42,5 @@ http_interactions:
 
         </MCAPI>'
     http_version: '1.1'
-  recorded_at: Sun, 11 Mar 2012 19:49:06 GMT
+  recorded_at: Sun, 11 Mar 2012 20:27:21 GMT
 recorded_with: VCR 2.0.0

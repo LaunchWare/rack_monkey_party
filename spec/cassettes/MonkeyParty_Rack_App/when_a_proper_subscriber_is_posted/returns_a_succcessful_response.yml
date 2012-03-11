@@ -17,7 +17,7 @@ http_interactions:
       server:
       - nginx/0.7.65
       date:
-      - Sun, 11 Mar 2012 19:41:12 GMT
+      - Sun, 11 Mar 2012 20:27:18 GMT
       content-type:
       - application/xml
       connection:
@@ -72,7 +72,7 @@ http_interactions:
 
         </MCAPI>'
     http_version: '1.1'
-  recorded_at: Sun, 11 Mar 2012 19:41:12 GMT
+  recorded_at: Sun, 11 Mar 2012 20:27:18 GMT
 - request:
     method: get
     uri: http://us4.api.mailchimp.com/1.2/?output=xml&apikey=<API KEY>&id=6ed27effda&method=listBatchSubscribe&double_optin=true&update_existing=false&replace_interests=true&batch[0][EMAIL]=auser%40anexample.com
@@ -90,7 +90,7 @@ http_interactions:
       server:
       - nginx/0.7.65
       date:
-      - Sun, 11 Mar 2012 19:41:13 GMT
+      - Sun, 11 Mar 2012 20:27:19 GMT
       content-type:
       - application/xml
       connection:
@@ -115,5 +115,5 @@ http_interactions:
 
         </MCAPI>'
     http_version: '1.1'
-  recorded_at: Sun, 11 Mar 2012 19:41:13 GMT
+  recorded_at: Sun, 11 Mar 2012 20:27:19 GMT
 recorded_with: VCR 2.0.0
