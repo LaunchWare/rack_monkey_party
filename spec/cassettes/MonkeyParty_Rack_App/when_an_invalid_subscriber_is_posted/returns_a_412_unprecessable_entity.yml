@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://us4.api.mailchimp.com/1.2/?output=xml&apikey=<API KEY>&id=6ed27effda&method=listBatchSubscribe&double_optin=true&update_existing=false&replace_interests=true&batch[0][EMAIL]=bademail
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/0.7.65
+      date:
+      - Sun, 11 Mar 2012 19:49:46 GMT
+      content-type:
+      - application/xml
+      connection:
+      - close
+      vary:
+      - Accept-Encoding
+      x-powered-by:
+      - PHP/5.3.2
+      set-cookie:
+      - _AVESTA_ENVIRONMENT=prod; path=/
+      content-length:
+      - '354'
+    body:
+      encoding: US-ASCII
+      string: ! '<MCAPI type="array">
+
+        <success_count type="integer">0</success_count>
+
+        <error_count type="integer">1</error_count>
+
+        <errors type="array">
+
+        <struct key="0" type="array">
+
+        <code type="integer">502</code>
+
+        <message type="string">Invalid Email Address: bademail</message>
+
+        <row type="array">
+
+        <EMAIL type="string">bademail</EMAIL>
+
+        </row>
+
+        </struct>
+
+        </errors>
+
+        </MCAPI>'
+    http_version: '1.1'
+  recorded_at: Sun, 11 Mar 2012 19:49:46 GMT
+recorded_with: VCR 2.0.0
