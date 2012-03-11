@@ -1,4 +1,4 @@
-env: MCAPI_KEY=1234
+env: MCAPI_KEY=1234 MCAPI_LIST_NAME=testing
 rvm: 
   - 1.9.2
   - 1.9.3

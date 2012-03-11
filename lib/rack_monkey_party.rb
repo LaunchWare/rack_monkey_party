@@ -12,7 +12,7 @@ module MonkeyParty
   end
 
   def self.list_name
-    @list_name
+    @list_name || ENV["MCAPI_LIST_NAME"]
   end
 
   def self.list
