@@ -8,6 +8,8 @@ describe MonkeyParty::Rack::App, :vcr do
     MonkeyParty::Rack::App.new
   end
 
+  let(:email) { "auser@anexample.com" }
+
   describe "when a subscriber isn't specified" do
     it "returns a precondition not met" do
       post "/"
@@ -16,7 +18,6 @@ describe MonkeyParty::Rack::App, :vcr do
   end
 
   describe "when a proper subscriber is posted" do
-    let(:email) { "auser@anexample.com" }
     it "returns a succcessful response" do
       do_post
       last_response.status.should eql(201)
@@ -42,8 +43,22 @@ describe MonkeyParty::Rack::App, :vcr do
     end
   end
 
-  def do_post
-    post "/", { "subscriber" => {"email" => email}}
+  describe "when a user requests json" do
+    it "responds with json" do
+      do_post
+      last_response.content_type.should eql("application/json")
+    end
+  end
+
+  describe "when a user requests html" do
+    it "responds with html" do
+      do_post("html")
+      last_response.content_type.should eql("text/html")
+    end
+  end
+
+  def do_post(format = "json")
+    post "/post.#{format}", { "subscriber" => {"email" => email}}
   end
 end
 
